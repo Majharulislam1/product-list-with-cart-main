@@ -1,0 +1,383 @@
+* {
+     margin: 0;
+     padding: 0;
+
+}
+
+:root {
+     --Red: #c73a0f;
+     --Green: #1ea475;
+     --Rose_50: #fcf9f7;
+     --Rose_100: #f4edeb;
+     --Rose_300: #c9aea6;
+     --Rose_400: #ad8985;
+     --Rose_500: #87635a;
+     --dark: #260f08;
+}
+
+
+
+
+.container {
+     width: 90%;
+     margin: 0 auto;
+     padding: 3.25rem 0;
+}
+
+.title h1 {
+     font-size: 2.5rem;
+     font-weight: 700;
+     padding-bottom: 2.5rem;
+     color: var(--dark);
+}
+
+
+.food_cart {
+     width: 75%;
+}
+
+.cart_section {
+     width: 25%;
+     /* height: auto; */
+     background-color: #fff;
+     border-radius: 0.5rem;
+     padding: 1.25rem;
+}
+
+.design_container {
+     display: flex;
+     justify-content: space-between;
+}
+
+.image_section img {
+     width: 100%;
+     height: auto;
+     border-radius: 1rem;
+}
+
+.button_section {
+     margin-bottom: 1rem;
+}
+
+.content_section p {
+     color: var(--Rose_400);
+     padding-bottom: 0.3rem;
+}
+
+.content_section h4 {
+     font-size: 1.2rem;
+     font-weight: 500;
+     color: var(--dark);
+     padding-bottom: 0.3rem;
+}
+
+.content_section h2 {
+     font-size: 1.2rem;
+     font-weight: 500;
+     color: var(--Red);
+     padding-bottom: 0.3rem;
+}
+
+
+/* Button section*/
+.button_section {
+     display: flex;
+     justify-content: center;
+     margin-top: -0.7rem;
+     margin-bottom: 2rem;
+}
+
+.button_section button{
+     margin-top: -1rem;
+}
+
+.btn_flex {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     background: #fff;
+     border-radius: 1.5rem;
+     font-size: 0.875rem;
+     color: var(--dark);
+     padding: 0.6rem 1.5rem;
+     border: 1px solid var(--Red);
+     font-weight: 600;
+     cursor: pointer;
+     margin-top: -2rem;
+}
+
+.btn_flex i {
+     color: var(--Red);
+     margin-right: 0.5rem;
+}
+
+
+
+.cart_count {
+     font-size: 1.2rem;
+}
+
+.button {
+     pointer-events: auto;
+     cursor: pointer;
+     background: var(--Red);
+     border: none;
+     padding: 1.5rem 3rem;
+     margin: 0;
+     font-family: inherit;
+     font-size: inherit;
+     position: relative;
+     display: inline-block;
+}
+
+.button::before,
+.button::after {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+}
+
+
+.button--skoll {
+     overflow: hidden;
+     border-radius: 1.25rem;
+     color: var(--dark);
+     width: 9.37rem;
+     height: auto;
+     border: 1px solid var(--Red);
+     padding: 0.5rem 1rem;
+     font-weight: 400;
+}
+
+
+
+.button--skoll span {
+     display: block;
+     position: relative;
+}
+
+.button--skoll>span {
+     overflow: hidden;
+     /* mix-blend-mode:; */
+}
+
+.button--skoll:hover>span>span {
+     animation: MoveUpInitial 0.2s forwards, MoveUpEnd 0.2s forwards 0.2s;
+}
+
+.button--skoll::before {
+     content: '';
+     background: #fff;
+     color: white;
+     width: 100%;
+     height: 0;
+     padding-bottom: 100%;
+     border-radius: 1.25rem;
+     transform: translate3d(0, 0, 0);
+     transition: transform 0.3s;
+     transition-timing-function: cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.button--skoll:hover::before {
+     transform: translate3d(0, 100%, 0);
+}
+
+#initials {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+
+
+.button--skoll:hover #initials {
+     display: none;
+
+}
+
+#secondary {
+     display: none;
+}
+
+.button--skoll:hover #secondary {
+     display: inline-flex;
+     justify-content: space-between;
+     align-items: center;
+     color: white;
+     width: 100%;
+}
+
+.plus_minus {
+     font-size: 1.2rem;
+}
+
+
+.food_grid{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 1rem;
+      margin-right: 1.5rem;
+}
+
+
+
+.cart_section h1{
+      color: var(--Red);
+      padding:0rem 0rem 1rem 0rem;
+}
+
+.image_border{
+      border: 3px solid var(--Red);
+      border-radius: 1rem;
+}
+
+
+
+.button--no-hover {
+     /* Define the styles for the button without hover effects */
+     border-radius: 1.25rem;
+     color: #ffffff;
+     width: 9.37rem;
+     height: auto;
+     border: 1px solid var(--Red);
+     padding: 0.5rem 1rem;
+     font-weight: 400;
+     overflow: hidden;
+ }
+ 
+ .button--no-hover span {
+     display: block;
+     position: relative;
+ }
+ 
+ .button--no-hover > span {
+     overflow: hidden;
+ }
+ 
+ /* Disable hover effect */
+ .button--no-hover:hover::before,
+ .button--no-hover:hover > span > span,
+ .button--no-hover:hover #initials {
+     display: none;   
+     animation: none;  
+     transform: none; 
+ }
+ 
+ .button--no-hover:hover #secondary {
+     display: flex;  
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+ }
+
+ .secondary{
+     display: flex;  
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+ }
+ 
+
+.items{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #f2f2f2;
+}
+
+ 
+
+.recipe_name{
+      font-size: 1rem;
+      padding-bottom: 0.4rem;
+      color: var(--dark);
+      font-weight: 500;
+}
+
+.pricing_p{
+      font-size: 0.875rem;
+      font-weight: 500;
+}
+
+
+.quantity{
+     color: var(--Red);
+     margin-right: 0.5rem;
+}
+.recipe_price{
+      color: var(--Rose_300);
+      font-weight: 400;
+      margin-right: 0.5rem;
+}
+
+.recipe_total_price{
+     color: var(--Rose_400);
+     
+}
+
+.cross_btn i{
+     color: var(--Rose_300);
+     cursor: pointer;
+     transition: ease-in-out 200ms;
+}
+.cross_btn i:hover{
+     color: var(--Rose_400);
+     
+}
+
+.total_amount{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      padding-bottom: 1.5rem;
+}
+
+.Order_section p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.total_amount_section h2{
+      font-size: 1.43rem;
+      font-weight: 700;
+      color: var(--dark);
+}
+
+
+.first_btn{
+      background-color: #fcf8f5;
+      color: var(--dark);
+      text-align: center;
+      width: 100%;
+      border:none;
+      font-size: 0.875rem;
+      padding: 1rem;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-bottom: 1rem;
+}
+ 
+
+.Order_confirm{
+      width: 100%;
+      color: white;
+      background: var(--Red);
+      border: none;
+      text-align: center;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 1.875rem;
+      cursor: pointer;
+      transition: ease-in-out 200ms;
+}
+
+.Order_confirm:hover{
+     background: #b8350e;
+}
